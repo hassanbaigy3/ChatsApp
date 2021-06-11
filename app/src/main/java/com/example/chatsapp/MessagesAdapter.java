@@ -23,8 +23,8 @@ public class MessagesAdapter extends RecyclerView.Adapter {
     final int ITEM_RECIEVE = 2;
 
     public MessagesAdapter(Context context, ArrayList<Message> messages  ){
-        this.context = context;
-        this.messages = messages;
+    this.context = context;
+    this.messages = messages;
     }
 
     //Since we have two sample layouts in this case we can not directly inflate both in the onCreate
@@ -34,8 +34,8 @@ public class MessagesAdapter extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if(viewType == ITEM_SENT){
-            View view = LayoutInflater.from(context).inflate(R.layout.item_send,parent,false);
-            return new SentViewHolder(view);
+             View view = LayoutInflater.from(context).inflate(R.layout.item_send,parent,false);
+             return new SentViewHolder(view);
         }
         else{
             View view = LayoutInflater.from(context).inflate(R.layout.item_recieve,parent,false);
